@@ -39,11 +39,4 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            echo '🧹 Cleaning workspace...'
-            cleanWs()
-            echo '✅ Pipeline finished.'
-        }
-    }
 }
