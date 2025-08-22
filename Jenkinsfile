@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo '📥 Cloning the Git repository...'
-                git url: 'https://github.com/cheth153/Python.git', branch: 'main'
+                git url: 'https://github.com/cheth153/pythonclone.git', branch: 'main'
             }
         }
 
