@@ -15,7 +15,9 @@ pipeline {
                 bat 'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\pip.exe install -r requirements.txt'
 
                 echo 'Running tests'
-                bat 'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe -m pytest'
+                dir("${WORKSPACE}") {
+                    bat 'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe -m pytest'
+                }
             }
         }
 
