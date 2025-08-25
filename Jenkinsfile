@@ -25,6 +25,7 @@ pipeline {
             steps {
                 echo ' Creating Dockerfile'
                    bat '''
+                   (
                    echo FROM python:3.9-slim
                    echo WORKDIR /app
                    echo COPY requirements.txt .
@@ -32,6 +33,7 @@ pipeline {
                    echo COPY . .
                    echo EXPOSE 5000
                    echo CMD ["python", "app.py"]
+                   ) > Dockerfile
                 '''
 
                     
