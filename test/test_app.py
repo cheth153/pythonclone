@@ -1,4 +1,8 @@
 # tests/test_app.py
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(_file_), '..')))
+
 from flask import Flask
 from app import app
 import requests_mock
